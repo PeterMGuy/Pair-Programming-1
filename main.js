@@ -40,3 +40,16 @@ const gcd = (a, b) => {
 console.log(gcd(84, 9));
 
 //Hard
+const testing = (string) => {
+  if (string.includes("{") && string.includes("}")) {
+    return true;
+  } else if (string.includes("[") && string.includes("]")) {
+    return true;
+  } else if (string.includes("(") && string.includes(")")) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log(testing("(Hello)"));
