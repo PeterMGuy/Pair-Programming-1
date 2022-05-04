@@ -53,3 +53,38 @@ const testing = (string) => {
 };
 
 console.log(testing("(Hello)"));
+
+//MEDIUM 4
+
+const car = {
+  make: "Chevy",
+  model: "Camaro",
+  year: 2022,
+  mileage: 5000,
+  color: "silver",
+  driveToWork: function () {
+    const oldMileage = this.mileage;
+
+    console.log(
+      `old mileage: ${oldMileage} | new mileage: ${(this.mileage += 33)}`
+    );
+  },
+  driveAroundTheWorld: function () {
+    const oldMileage = this.mileage;
+
+    console.log(
+      `old mileage: ${oldMileage} | new mileage: ${(this.mileage += 24000)}`
+    );
+    // return (this.mileage += 24000);
+  },
+  runErrands: function () {
+    const oldMileage = this.mileage;
+    console.log(
+      `old mileage: ${oldMileage} | new mileage: ${(this.mileage += 30)}`
+    );
+  },
+};
+
+car.driveAroundTheWorld();
+car.driveToWork();
+car.runErrands();
