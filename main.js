@@ -1,5 +1,14 @@
 "use strict";
-//EASY 1
+
+//Easy1
+let arr = [1,2,3,4,5,6,7,8,9,10,11,12]
+
+let odds = arr.filter(n => n%2)
+let evens = arr.filter(n => n%2 == 0)
+
+console.log(odds)
+
+//EASY 2
 let newArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 const myPrimeArray = newArray.filter((num) => {
@@ -30,6 +39,22 @@ const vowelChecker = (str) => {
 
 vowelChecker("A");
 
+//Medium2
+const valonly = x => {
+    const newArray = [];
+    for(let i = 0; i < x.length; i++){
+        const char = x.charAt(i);
+        if("aeiouAEIOU".indexOf(char) !== -1){
+            newArray.push(char.toLowerCase())
+        }
+        else{
+            newArray.push(char.toUpperCase())
+        }
+    }
+    return newArray.join("")
+}
+console.log(valonly("Peter"))
+
 //MEDIUM 3
 
 const gcd = (a, b) => {
@@ -38,6 +63,33 @@ const gcd = (a, b) => {
 };
 
 console.log(gcd(84, 9));
+
+//Medium4
+class Car  {
+    constuctor (make, model, year, color, mileage){
+        this.make = make;
+        this.model = model;
+        this.year = year;
+        this.color = color;
+        this.mileage = mileage;
+    }
+    driveToWork(){
+        this.mileage + 42;
+        console.log(this.mileage + 42)
+        }
+    driveAroundTheWorld(){
+        this.mileage + 2000;
+        console.log(this.mileage + 2000)
+    }
+    runErrands(){
+        this.mileage + 14;
+        console.log(this.mileage + 14)
+    };
+};
+
+let car1 = new car1("toyota", "hybrid", 2014, "blue", 2000); 
+
+car1.driveToWork
 
 //Hard
 const testing = (string) => {
