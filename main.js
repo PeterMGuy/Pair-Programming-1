@@ -66,7 +66,7 @@ console.log(gcd(84, 9));
 
 //Medium4
 class Car  {
-    constuctor (make, model, year, color, mileage){
+    constructor (make, model, year, color, mileage){
         this.make = make;
         this.model = model;
         this.year = year;
@@ -75,21 +75,23 @@ class Car  {
     }
     driveToWork(){
         this.mileage + 42;
-        console.log(this.mileage + 42)
+        console.log(this.mileage += 42)
         }
     driveAroundTheWorld(){
         this.mileage + 2000;
-        console.log(this.mileage + 2000)
+        console.log(this.mileage += 2000)
     }
     runErrands(){
         this.mileage + 14;
-        console.log(this.mileage + 14)
+        console.log(this.mileage += 14)
     };
 };
 
-let car1 = new car1("toyota", "hybrid", 2014, "blue", 2000); 
-
-car1.driveToWork
+let car1 = new Car("toyota", "hybrid", 2014, "blue", 2000); 
+console.log(car1)
+car1.runErrands()
+car1.driveAroundTheWorld()
+car1.driveToWork()
 
 //Hard
 const testing = (string) => {
